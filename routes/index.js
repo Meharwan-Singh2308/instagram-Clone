@@ -13,7 +13,6 @@ router.get("/", function (req, res) {
 });
 
 router.get("/login", function (req, res) {
-//arre vo maine login ki jagah index likha tha 
   res.render('login',{error: req.flash('error'), footer: false});
 });
 
