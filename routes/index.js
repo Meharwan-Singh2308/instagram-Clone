@@ -13,10 +13,10 @@ router.get("/", function (req, res) {
 });
 
 router.get("/login", function (req, res) {
-  console.log(req.flash("error"));
-  let error = req.flash("error");
-  res.render("login", { footer: false, error });
+//arre vo maine login ki jagah index likha tha 
+  res.render('login',{error: req.flash('error'), footer: false});
 });
+
 
 router.get("/feed", isLoggedIn, async function (req, res) {
   const user = await userModel.findOne({ username: req.session.passport.user });
